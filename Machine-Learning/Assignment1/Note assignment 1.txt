@@ -1,0 +1,35 @@
+https://www.kaggle.com/code/osamaalaa2001/airbnb-explore-analyze-and-act
+
+
+Questions:
+Get the unique Number of (hosts, neighbourhood_group, Room_type).
+Get the (host, neighbourhood_group, room_type) with the biggest number of listings.
+Get the average of (prices per neighbourhood_group and room types).
+Get the relationships ( prices and minimum_nights, prices and number_of_reviews, Prices and room_type).
+Can we predict the price?
+
+
+https://www.kaggle.com/code/dahazil/starter-new-york-city-airbnb-open-data-388664de-4
+
+Correlation matrix -> Correlation between location, room type, price , calculated host listing count,
+review ?
+
+
+https://www.kaggle.com/code/mlomuscio/statistics-assessment-1
+
+Is there a difference in price across different neighbourhood groups?
+
+Is there a difference in price across room types?
+
+Is there a relationship between price and minimum_nights? If there is, describe it. If there isn’t, explain how you know.
+
+
+https://www.kaggle.com/code/alialangevin/notebook2beb6aac56
+
+Describe the distribution of room_type. Which is the most popular?
+
+Is there a difference in price across room types?
+
+Is there a difference in price across different neighbourhood groups?
+
+Is there a relationship between price and minimum_nights? If there is, describe it. If there isn’t, explain how you know.
