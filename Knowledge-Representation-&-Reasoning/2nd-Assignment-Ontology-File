@@ -1,0 +1,1052 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/"
+     xml:base="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:AI-For-Library="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library">
+        <rdfs:comment>This is an ontology that optimizes the services offered to the readers by the library</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#E-Library -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#E-Library">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Wing-Names"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Curie-Wing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Feynman-Wing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Regular-Library -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Regular-Library">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Wing-Names"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/VanGogh-and-Napoleon-Wing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Wing-Names -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Wing-Names">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library-Wingers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library-Wingers">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Wingers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library"/>
+        <rdfs:comment>These members help individuals with their requirements in the E-Library section.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Maintenance-Staff -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Maintenance-Staff">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:comment>They are responsible for keeping the premises neat and tidy.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Receptionist -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Receptionist">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+        <rdfs:comment>Receptionist has the responsibility of lending the books to the entrants, i.e., the students and the staff.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library-Wingers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library-Wingers">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Wingers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+        <rdfs:comment>These members assist individualswith their requirements in the regular library section.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Wingers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Wingers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:comment>Wingers are assigned to each wing of the library to help the entrants with their requirements.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#E-Library-Wing-ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#E-Library-Wing-ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Wing-ID"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Each room in the E-library is given a unique ID</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Regular-Wing-ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Regular-Wing-ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Wing-ID"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Each room in the Regular-library is given a unique ID</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Wing-ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Wing-ID">
+        <rdfs:comment>Identification for each room of the respective wing.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library-Winger-ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library-Winger-ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Winger-ID"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Identification for E-Library wingers</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Maintenance-Staff-ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Maintenance-Staff-ID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Identification for maintenance staff members</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Receptionist-ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Receptionist-ID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Identification for the receptionist</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Winger-ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Winger-ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Winger-ID"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Identification for regular library wingers.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Winger-ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Winger-ID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:comment>Identification for the wingers</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/VanGogh-and-Napoleon-Wing"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library"/>
+        <rdfs:comment>This wing emphasises on content and resources related to arts and history.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Curie-Wing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Curie-Wing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library"/>
+        <rdfs:comment>The users can find resources related to the subject of chemistry in this wing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:comment>The E-Library section contains physical as well as soft copies (PDFs and similar formats) of articles, books, journals, and so on, of various departments like art, chemistry, history, mathematics, and physics.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Feynman-Wing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Feynman-Wing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library"/>
+        <rdfs:comment>The users can find physics resources in the Feynman wing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+        <rdfs:comment>This wing is named so because of its genre, i.e, action. Users can find books that fall into this genre.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library">
+        <rdfs:comment>The library is divided as two types, namely, E-library and Regular Library.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+        <rdfs:comment>Short for Romeo and Juliet, rom com enthusiasts can find books related to love and romance in this wing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library"/>
+        <rdfs:comment>Ramanujan wing is known for its mathematics related resources.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <rdfs:comment>This section of the library contains physical books that the readers can make use of.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+        <rdfs:comment>Users can find books related to superheroes, comic books, sci-fi, and so on in this wing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+        <rdfs:comment>This wing contains books that fall in thriller and drama genres.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/VanGogh-and-Napoleon-Wing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/VanGogh-and-Napoleon-Wing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+        <rdfs:comment>This wing emphasises on content and resources related to arts and history.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Arabian_Sands_by_Wilfred_Thesiger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Arabian_Sands_by_Wilfred_Thesiger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-2</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Join Wilfred Thesiger on a journey through the parched &quot;Empty Quarter&quot; of Arabia in &quot;Arabian Sands&quot;. This now-classic account captures the explorer&apos;s exploration of the deserts, as he travels amongst people who had never seen a European and considered it their duty to kill Christian infidels. Thesiger&apos;s record is invaluable to understanding the modern Middle East.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Brief_History_of_Time_From_the_Big_Bang_to_Black_Holes_by_Stephen_Hawking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Brief_History_of_Time_From_the_Big_Bang_to_Black_Holes_by_Stephen_Hawking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Feynman-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-3</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Explore the mysteries of the universe with this acclaimed masterpiece by a celebrated physicist. From the origins of time to the boundaries of the universe, delve into the secrets of space and time. Discover the great theories of the cosmos from Newton to Einstein, and explore the wonders of the Big Bang, black holes, and more. Written in clear and concise language, this book offers a fascinating and accessible introduction to the universe and its wonders. This new edition includes exciting updates from the author, along with a companion app, Stephen Hawking&apos;s Pocket Universe.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Calculus_I_II_III__by_Jerrold_E._Marsden_and_Alan_Weinstein -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Calculus_I_II_III__by_Jerrold_E._Marsden_and_Alan_Weinstein">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-4</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Discover techniques like differential and integral calculus with this three volume series on calculus.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Concepts_of_Physics_by_H._C._Verma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Concepts_of_Physics_by_H._C._Verma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Feynman-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-3</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>This comprehensive physics book covers everything from the basics to advanced concepts. It&apos;s the perfect resource for high school students and those preparing for competitive exams. Packed with solved and unsolved problems, it covers topics such as kinematics, Newton&apos;s Laws of Motion, circular motion, and optical instruments. With easy-to-understand explanations, this book is an essential tool for anyone looking to master physics.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Cosmos_by_Carl_Sagan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Cosmos_by_Carl_Sagan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Feynman-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-3</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Explore the universe and the evolution of our existence in this iconic science book. Written with poetic prose, discover the vastness of space and the incredible journey of life on Earth. With stunning illustrations and contributions from astrophysicists, this must-read covers topics such as the origin of life, the human brain, technology advancements, and the forces that shaped modern science. Let Cosmos take you on a thrilling journey through time and space.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Elementary_Differential_Equations_with_Boundary_Value_Problems_by__William_F._Trench -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Elementary_Differential_Equations_with_Boundary_Value_Problems_by__William_F._Trench">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-4</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>These texts are appropriate for a first course in differential equations for one or two semesters. There are more than 2000 exercises, and the student manual has solutions for most of the even numbered ones.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Gone_Girl_by_Gillian_Flynn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Gone_Girl_by_Gillian_Flynn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-5</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>A thrilling exploration of a marriage gone wrong from one of the most acclaimed suspense writers of our time. When the clever and beautiful wife of a small-town golden boy disappears on their fifth wedding anniversary, the pressure mounts as rumors fly and suspicions rise. With razor-sharp writing and intricate plot twists, this dark psychological thriller will have you on the edge of your seat until the very end.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Indigo_by_Beverly_Jenkins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Indigo_by_Beverly_Jenkins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-3</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Indigo is a powerful historical fiction novel that follows Hester Wyatt, a former slave who has become a dedicated member of the Underground Railroad in Michigan. When she is tasked with hiding the injured and rude Galen Vachon, aka the &quot;Black Daniel,&quot; she begins to question her vow to protect him. As the two work together to overcome obstacles and find love, they must also navigate traitors and slave catchers. This is a story of overcoming distrust and finding true freedom through love.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Introduction_to_Algorithms_by_Thomas_H._Cormen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Introduction_to_Algorithms_by_Thomas_H._Cormen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-4</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Discover a comprehensive guide to the world of algorithms with this essential text and professional reference. From vEB trees to dynamic programming, this book covers a broad range of topics in depth while making them accessible to all levels of readers. Each chapter is self-contained and easy to use as a unit of study. Plus, the pseudocode descriptions make it readable for anyone who has done a little programming. With improved treatment of dynamic programming and greedy algorithms, and two new chapters on van Emde Boas trees and multithreaded algorithms, you won&apos;t want to miss this updated edition.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Introduction_to_Modern_Statistics_by_Mine_Çetinkaya-Rundel_and_Johanna_Hardin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Introduction_to_Modern_Statistics_by_Mine_Çetinkaya-Rundel_and_Johanna_Hardin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-4</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>This book is another excellent open source text from the OpenIntro group and is based on OpenIntro Statistics and Introduction to Statistics with Randomization and Simulation by Diez, Barr, and Çetinkaya-Rundel. It strongly emphasizes exploratory data analysis and simulation-based inference with randomization and bootstrapping.
+
+In addition to the exercises at the end of each section and chapter, there are examples and “Guided Practice Questions” for the reader to do with answers to give immediate feedback.
+
+There are 27 chapters grouped into six sections.
+
+Part 1: Introduction to data. Data structures, variables, summaries, graphics, and basic data collection and study design techniques.
+Part 2: Exploratory data analysis. Data visualization and summarisation, with particular emphasis on multivariable relationships.
+Part 3: Regression modeling. Modeling numerical and categorical outcomes with linear and logistic regression and using model results to describe relationships and made predictions.
+Part 4: Foundations for inference. Case studies are used to introduce the ideas of statistical inference with randomization tests, bootstrap intervals, and mathematical models.
+Part 5: Statistical inference. Further details of statistical inference using randomization tests, bootstrap intervals, and mathematical models for numerical and categorical data.
+Part 6: Inferential modeling. Extending inference techniques presented thus-far to linear and logistic regression settings and evaluating model performance.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Linear_Algebra_by_Jim_Hefferon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Linear_Algebra_by_Jim_Hefferon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-4</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>This book has the standard content of a course for science, math, and engineering students that follows calculus. A semester of calculus is the explicit prerequisite, but most students would have three semesters of calculus and for them some of the beginning sections of the book can be skipped. Each chapter ends with three or four applications of that chapter’s subject.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Lost_in_the_Jungle_by_Yossi_Ghinsberg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Lost_in_the_Jungle_by_Yossi_Ghinsberg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-2</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Embark on a thrilling adventure through the heart of the Amazon rainforest in this gripping true story. Four backpackers begin their dream journey in Bolivia, but things quickly turn into a dangerous nightmare. Separated from his partner after a rafting accident, Yossi is left alone to survive for weeks without any survival training, map, or knife. As he battles the wildest backdrop on the planet, he is forced to improvise shelter and forage for food to stay alive. Lost in the Jungle is a riveting tale of friendship, nature&apos;s teachings, and the sheer will to survive in the face of adversity.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Outlander_by_Diana_Gabaldon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Outlander_by_Diana_Gabaldon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-3</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Transported from 1945 to 1743 Scotland, a former combat nurse named Claire Randall navigates a dangerous new world torn by war and raids. Amid lairds and spies, she finds a love so intense it tears at her loyalty and heart, forcing her to choose between two lives and two men.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Sailing_Alone_Around_the_World_by_Joshua_Slocum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Sailing_Alone_Around_the_World_by_Joshua_Slocum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-2</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>This thrilling memoir recounts Captain Joshua Slocum&apos;s three-year journey to circumnavigate the world alone by boat. As the first man to accomplish this feat, Slocum faced pirate attacks, gale-force winds, and the ever-present threat of shipwreck. His journey took him across the Pacific and Atlantic oceans, where he visited South Africa, South America, and Australia. This book is a must-read for anyone with a love for adventure and the open sea.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Secret_Wars_by_Jonathan_Hickman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Secret_Wars_by_Jonathan_Hickman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-4</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Discover the aftermath of the ultimate Marvel Universe catastrophe in this gripping tale of survival and power struggles. The collision of universes has brought forth a patchwork planet composed of the remnants of hundreds of dimensions - Battleworld. Doctor Doom now reigns supreme over this new world, where strange creatures and familiar faces battle for dominance. From the ashes of destruction, the Secret Wars will decide the fate of what&apos;s left. Don&apos;t miss out on the epic journey through this multiversal war.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Seven_Years_in_Tibet_by_Heinrich_Harrer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Seven_Years_in_Tibet_by_Heinrich_Harrer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-2</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Escape, exploration, and observation take center stage in this captivating tale. Follow an Austrian as he evades capture, eventually finding himself in Tibet. For seven years, he immerses himself in the country’s culture, uncovering its unique customs, belief systems, and political landscape.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Collected_Essex_County_by_Jeff_Lemire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Collected_Essex_County_by_Jeff_Lemire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-4</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Experience the rich and emotional journey of an imaginary farming community in Ontario, Canada through the eyes of award-winning cartoonist Jeff Lemire in The Collected Essex County. This graphic novel trilogy explores the themes of family, memory, grief, secrets, and reconciliation while delving into the complex relationships between brothers and the scars left behind by a century of deception. Lemire&apos;s lush, expressive inking transports readers to the heart of Essex County, making it an intimate and unforgettable read. This deluxe edition includes over 40 pages of previously unpublished material, including two new stories, making it a must-read for graphic novel enthusiasts.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Complete_Maus_by_Art_Spiegelman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Complete_Maus_by_Art_Spiegelman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-4</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>The Complete Maus is a captivating graphic novel that tells the story of Vladek Spiegelman and his wife&apos;s survival during Hitler&apos;s Europe. Through the use of cartoons, the author conveys the everyday struggles and fear of the Holocaust while exploring the emotional journey of guilt, relief, and survival. This contemporary classic sheds light on how the trials of survivors affect their children and is of immeasurable significance.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Devil_in_Winter_by_Lisa_Kleypas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Devil_in_Winter_by_Lisa_Kleypas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-3</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>In this historical romance novel, Evangeline Jenner, the shyest of the Wallflowers, needs to escape her unscrupulous relatives to inherit her wealth. She offers a devil&apos;s bargain to the dangerous rake, Viscount St. Vincent: marriage. But there&apos;s a condition - no lovemaking after their wedding night. Will Sebastian surrender his own heart in the name of true love?</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Fault_in_Our_Stars_by_John_Green -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Fault_in_Our_Stars_by_John_Green">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-3</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>A heart-wrenching yet witty tale about Hazel, a terminally ill teen who finds unexpected love in Augustus at a cancer support group. This powerful story explores the beauty and pain of life, love and mortality in a bold, raw, and insightful way.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Feynman_Lectures_on_Physics_by_Richard_P._Feynman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Feynman_Lectures_on_Physics_by_Richard_P._Feynman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Feynman-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-3</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Explore physics through the eyes of Richard Feynman with these timeless and essential lectures. From the basics of Newtonian physics to the complexities of general relativity and quantum mechanics, Feynman&apos;s clear exposition and deep insights make this a must-read for anyone interested in the field. These definitive and introductory lectures are not only great for students of physics, but for anyone seeking an inimitable introduction to the world of physics.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Glass_Hammer_by_K._W._Jete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Glass_Hammer_by_K._W._Jete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-5</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Get lost in the fast-paced world of Schuyler, a rogue sprinter on a mission to outrun government satellites and deliver computer chips to the black market. Along the way, Schuyler becomes an unexpected media sensation and the subject of a bizarre cult following. This thrilling book is a must-read for anyone looking for a unique and exhilarating adventure.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Heir_and_the_Spare_by_Emily_Albright -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Heir_and_the_Spare_by_Emily_Albright">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-3</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>In &quot;The Heir and the Spare,&quot; Evie Gray embarks on a quest to uncover her deceased mother&apos;s secret past, revealing a world of tiaras and royalty. As she attends her mother&apos;s alma mater, Oxford, she meets the charming Prince Edmund of England. But doubts arise as to whether Edmund could be with an untitled American, and Evie must navigate new family responsibilities while figuring out if her perfect prince has the right intentions. This modern fairytale is a captivating page-turner about discovering one&apos;s past and forging a new future.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_League_of_Extraordinary_Gentlemen_Omnibus_by_Alan_Moore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_League_of_Extraordinary_Gentlemen_Omnibus_by_Alan_Moore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-4</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>This incredible omnibus collection features two epic tales of adventure and heroism. Join legendary characters like Allan Quatermain, Captain Nemo, and the Invisible Man as they unite to save London and all of Britain from a deadly menace. And when Mars launches an invasion, only this league of extraordinary gentlemen can save the Earth itself. Gathered here are both volumes of the thrilling saga, now available in one stunning volume.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Shining_by_Stephen_King -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Shining_by_Stephen_King">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-5</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>This chilling novel follows Jack Torrance as he begins his new job at the remote Overlook Hotel as the off-season caretaker. He hopes to reconnect with his family and focus on his writing, but as winter sets in, strange and sinister forces gather around the hotel. The only one to notice is his son, Danny, a gifted five-year-old. Get ready for a spine-tingling experience.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Silence_of_the_Lambs_by_Thomas_Harris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Silence_of_the_Lambs_by_Thomas_Harris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-5</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>This thriller delves into the depths of a psychopath&apos;s mind as an FBI trainee races against time to catch a serial killer. Brace yourself for the ultimate villain of modern fiction: Hannibal Lecter. This bestselling book has sold over five million copies and will leave you silenced with fear.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Truth_About_Forever_by_Sarah_Dessen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Truth_About_Forever_by_Sarah_Dessen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-3</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>A young woman named Macy is struggling to deal with the loss of her father and the monotony of her days. However, unexpected events, such as a new job with a lively crew and renovating a neglected beach house, lead her to meet a boy named Wes who challenges her sheltered life. Macy begins to question her path and identity.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_World_of_Cyberpunk_2077_by_Marcin_Batylda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_World_of_Cyberpunk_2077_by_Marcin_Batylda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-5</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Step into the dystopian world of Cyberpunk 2077 with this captivatingly designed full-color hardcover. Delve deep into the lore and history of Night City, the epicenter of this vibrant new action-RPG from CD Projekt Red. Explore the various districts, gangs, and technology of tomorrow that are necessary tools to get ahead in this world. Dark Horse Books and CD Projekt Red present an extensive examination of the rich lore of Cyberpunk 2077, containing everything you need to know about the long-awaited follow-up from the creators of The Witcher video game series.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Trigonometry_by_Katherine_Yoshiwara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Trigonometry_by_Katherine_Yoshiwara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-4</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>This trigonometry textbook can serve students in a variety of programs. Starting with a review of relevant facts from geometry, it covers the material in a standard course, including a treatment of vectors, polar coordinates, and complex numbers.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Adrift:_Seventy-six_Days_Lost_at_Sea_by_Steven_Callahan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Adrift:_Seventy-six_Days_Lost_at_Sea_by_Steven_Callahan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-2</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Survival at sea! Steven Callahan shares his incredible firsthand account in Adrift, a seafaring classic that was on the New York Times bestseller list for over 36 weeks. He&apos;s the only man known to have survived more than a month alone at sea in an inflatable raft, fighting for his life after his sloop capsized. A must-have for any adventure library.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Batman:_The_Long_Halloween_by_Jeph_Loeb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Batman:_The_Long_Halloween_by_Jeph_Loeb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-4</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>A thrilling mystery unfolds as Batman works with Harvey Dent and Lieutenant James Gordon to catch a killer who strikes only on holidays. With each passing month, the clock ticks closer to the next victim&apos;s demise. Will Batman discover the killer&apos;s identity in time? This edition also explores the origins of Batman&apos;s nemesis, Two-Face. Get ready to be captivated till the very end.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Bone:_The_Complete_Cartoon_Epic_in_One_Volume_by_Jeff_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Bone:_The_Complete_Cartoon_Epic_in_One_Volume_by_Jeff_Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-4</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>A group of cartoon cousins find themselves lost in a pre-technological valley, where they spend a year making new friends and out-running enemies. After being separated and lost in a vast, uncharted desert, they find a forested valley full of wonderful and terrifying creatures. This American graphic novel is the complete 1300 page epic from start to finish in one deluxe trade paperback.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Chemistry_by_Steven_Zumdahl;_Donald_J._DeCoste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Chemistry_by_Steven_Zumdahl;_Donald_J._DeCoste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Curie-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-2</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Learn the skills you need to succeed in your chemistry course with CHEMISTRY, Tenth Edition. This trusted text has helped generations of students learn to &quot;think like chemists&quot; and develop problem-solving skills needed to master even the most challenging problems. Clear explanations and interactive examples help you build confidence for the exams, so that you can study to understand rather than simply memorize. Combined with the online resources and instant feedback in OWLv2, you&apos;ll be on your way to developing a deeper understanding of chemistry concepts and solving complex problems in all aspects of your life.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Crier&apos;s_War_by_Nina_Varela -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Crier&apos;s_War_by_Nina_Varela">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-3</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>In a world ravaged by war between humans and the Made, Ayla dreams of revenge against the rulers who killed her family. Her target? Lady Crier, a Made girl meant to inherit her father&apos;s rule. But as Ayla gets closer to her target, she learns of Crier&apos;s own struggles against her oppressive father and falls in love. Nina Varela&apos;s debut novel is a poignant tale of love and revolution set in a richly-imagined fantasy world.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Dune:_Deluxe_Edition_by_Frank_Herbert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Dune:_Deluxe_Edition_by_Frank_Herbert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-5</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Explore a unique and captivating world in this bestselling science fiction novel, now available in a deluxe hardcover edition. Set on the harsh desert planet Arrakis, the story follows the young Paul Atreides as he navigates a treacherous political landscape where the only valuable resource is a coveted drug called &quot;spice.&quot; As Paul&apos;s family is betrayed and destroyed, he embarks on a journey that will lead him to a destiny beyond his wildest dreams. With a stunning blend of adventure, mysticism, and politics, Dune is a triumph of the imagination and a true masterpiece of science fiction.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#McGraw-Hill_dictionary_of_chemistry._by_Sybil_P._Parker;_McGraw-Hill_Education_Staff -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#McGraw-Hill_dictionary_of_chemistry._by_Sybil_P._Parker;_McGraw-Hill_Education_Staff">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Curie-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-2</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Derived from the world-renowned &quot;McGraw-Hill Dictionary of Scientific and Technical Terms: Sixth Edition&quot;, this vital reference offers a wealth of essential information in a portable, convenient, quick-find format. Whether you&apos;re a professional, a student, a writer, or a general reader with an interest in science, there is no better or more authoritative way to stay up-to-speed with the current language of chemistry or gain an understanding of its key ideas and concepts. Written in clear, simple language understandable to the general reader, yet in-depth enough for scientists, educators, and advanced students.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Ready_Player_One:_A_Novel_by_Ernest_Cline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Ready_Player_One:_A_Novel_by_Ernest_Cline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-5</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Set in a bleak future world, a teenage boy finds solace in a virtual reality game where he searches for clues left behind by the game&apos;s creator, with a promise of immense wealth and power for the one who solves it. Soon, Wade becomes embroiled in a dangerous race with other players, who will stop at nothing to win. As he strives to survive, he must also confront the harsh realities of the real world he has always sought to avoid.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Relativity:_The_Special_and_General_Theory_by_Albert_Einstein -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Relativity:_The_Special_and_General_Theory_by_Albert_Einstein">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Feynman-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-3</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Discover the theory of relativity in an accessible version written by the genius Albert Einstein himself. This book is perfect for those interested in the theory from a scientific and philosophical point of view but are not familiar with the mathematical apparatus of theoretical physics. Originally written in 1916 shortly after The General Theory of Relativity was completed, Einstein immediately set out to share his excitement with as wide a public as possible. This Penguin Classic edition features a new introduction by bestselling science author Nigel Calder.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Perfect_Storm:_A_True_Story_of_Men_Against_the_Sea_by_Sebastian_Junger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Perfect_Storm:_A_True_Story_of_Men_Against_the_Sea_by_Sebastian_Junger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-2</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Experience the raw power of Mother Nature in The Perfect Storm, a gripping non-fiction account of a once-in-a-century nor&apos;easter that created colossal waves and winds of up to 120 miles an hour. Follow the harrowing journey of the six-man crew of the Andrea Gail, a fishing boat caught in the heart of the tempest. This book offers a riveting exploration of nature&apos;s awe-inspiring yet catastrophic forces and the human struggle against them.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Theory_of_Everything:_The_Origin_and_Fate_of_the_Universe_by_Stephen_W._Hawking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#The_Theory_of_Everything:_The_Origin_and_Fate_of_the_Universe_by_Stephen_W._Hawking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Feynman-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-3</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Discover the history of ideas about the universe and today&apos;s most important scientific theories about time, space, and the cosmos in this clear and accessible book. Based on lectures given at Cambridge University, &quot;The Theory of Everything&quot; presents the most complex theories of physics in an easy-to-understand way. You&apos;ll be enlightened and exposed to the rich history of scientific thought and the complexities of the universe we live in.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Thor_by_Jason_Aaron:_The_Complete_Collection_Vol1_by_Esad_Ribic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Thor_by_Jason_Aaron:_The_Complete_Collection_Vol1_by_Esad_Ribic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-4</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>This epic adventure follows Thor as he races to uncover the mystery behind the disappearance of various gods across time. From past to future, Thor&apos;s journey will take him across space and to the ultimate confrontation with the God Butcher. Along the way, he must find new allies to aid him in the battle against the dark elves and prevent the triggering of the Godbomb. This collection of THOR: GOD OF THUNDER 1-18 is a thrilling, blood-soaked adventure that will leave readers on the edge of their seats.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Tracks:_A_Womans_Solo_Trek_Across_1700_Miles_of_Australian_Outback_by_Robyn_Davidson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#Tracks:_A_Womans_Solo_Trek_Across_1700_Miles_of_Australian_Outback_by_Robyn_Davidson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-2</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Embark on a captivating journey across the harsh Australian desert alongside a brave and courageous woman and her four camels in this unforgettable memoir. Braving sweltering heat, dangerous snakes, and unwanted advances, the protagonist emerges as a tenacious heroine driven by her love for Australia&apos;s landscape and its people. This compelling story of self-discovery and transformation is a must-read for all adventure seekers.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#What_Is_Mathematics?_An_Elementary_Approach_to_Ideas_and_Methods_by_Richard_Courant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library#What_Is_Mathematics?_An_Elementary_Approach_to_Ideas_and_Methods_by_Richard_Courant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-4</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Discover the beauty and importance of mathematics in everyday life with this classic work. Written by Richard Courant and Herbert Robbins, this book highlights the fundamental ideas and methods of mathematics in an engaging and accessible manner. From natural numbers to topology and calculus, readers can explore a range of mathematical concepts through independent chapters and sections. Recently updated with a new chapter by Ian Stewart, What is Mathematics? also explores the latest developments in the field and proves the Four-Color Theorem and Fermat&apos;s Last Theorem. Perfect for beginners and scholars alike, this book gives readers a greater understanding of mathematics and its relevance to their lives.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/A_History_of_the_World_in_100_Objects_by_Neil_Macgregor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/A_History_of_the_World_in_100_Objects_by_Neil_Macgregor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing"/>
+        <owl:differentFrom rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/The_Story_of_Art_by_E.H._Gombrich"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-1</AI-For-Library:E-Library-Wing-ID>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-1</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Explore past civilizations through the objects that defined them in this intellectual and visual feast of a book. From a chopping tool from the Olduvai gorge in Africa to modern-day objects that shape our world, Neil MacGregor&apos;s A History of the World in 100 Objects takes a bold approach to human history. Discover the story behind a stone pillar that tells of an Indian emperor preaching tolerance, Spanish pieces of eight that mark the beginning of a global currency, and an early Victorian tea-set that speaks to the impact of empire. Mary Beard calls it &quot;brilliant&quot; and &quot;engagingly written.&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Regular-Library"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <Regular-Winger-ID>AK3001</Regular-Winger-ID>
+        <rdfs:comment>Alan Klum is the winger of the Regular Library wing. He can help readers with resources present in the Regular-Library wing</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Emily-Ryder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Emily-Ryder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <Receptionist rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Emily-Ryder"/>
+        <Receptionist-ID>ER1001</Receptionist-ID>
+        <rdfs:comment>Emily Ryder is the receptionist and also the librarian of the library</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Encyclopedia_of_Inorganic_and_Bioinorganic_Chemistry_by_Robert_A._Scott -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Encyclopedia_of_Inorganic_and_Bioinorganic_Chemistry_by_Robert_A._Scott">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Curie-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-2</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>The Encyclopedia of Inorganic Chemistry has merged with the Handbook of Metalloproteins to form the Encyclopedia of Inorganic and Bioinorganic Chemistry (EIBC). EIBC incorporates all existing articles from both the Encyclopedia of Inorganic Chemistry and the Handbook of Metalloproteins, and is updated quarterly.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Inorganic_Chemistry_by_James_E._House -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Inorganic_Chemistry_by_James_E._House">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Curie-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-2</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Inorganic Chemistry, Second Edition, provides essential information for students of inorganic chemistry or for chemists pursuing self-study. The presentation of topics is made with an effort to be clear and concise so that the book is portable and user friendly. The text emphasizes fundamental principles--including molecular structure, acid-base chemistry, coordination chemistry, ligand field theory, and solid state chemistry. It is organized into five major themes (structure, condensed phases, solution chemistry, main group and coordination compounds) with several chapters in each.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Khalid-Muhammad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Khalid-Muhammad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Sachin-Sharma"/>
+        <Maintenance-Staff rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Khalid-Muhammad"/>
+        <Maintenance-Staff-ID>KM5002</Maintenance-Staff-ID>
+        <rdfs:comment>Khalid-Muhammad takes care of the maintenance of the library.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Sachin-Sharma -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Sachin-Sharma"/>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Letters_of_Vincent_Van_Gogh_by_Mark_Roskill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Letters_of_Vincent_Van_Gogh_by_Mark_Roskill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing"/>
+        <owl:differentFrom rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/The_Story_of_Art_by_E.H._Gombrich"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-1</AI-For-Library:E-Library-Wing-ID>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-1</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Experience the human side of one of the most haunting figures in modern Western culture with this new selection of Vincent van Gogh&apos;s letters. Candidly sharing his religious struggles, ill-fated search for love, and battles with mental illness, van Gogh&apos;s letters offer an intense personal narrative of artistic development and a unique account of the process of creation. Expertly selected and edited by Ronald de Leeuw and translated by Arnold Pomerans, this Penguin Classics edition also includes the original illustrations and biographical passages that shed light on van Gogh&apos;s inner journey. Discover the man behind the myth and explore the emotional and spiritual depths of this post-impressionist painter.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Life_With_Picasso_by_Françoise_Gilot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Life_With_Picasso_by_Françoise_Gilot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing"/>
+        <owl:differentFrom rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/The_Story_of_Art_by_E.H._Gombrich"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-1</AI-For-Library:E-Library-Wing-ID>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-1</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>&quot;Life with Picasso&quot; is a fascinating memoir offering insight into the intimate and creative life shared by two modern artists. When Françoise Gilot met Pablo Picasso, she was a young woman with a passion for art, who set out to become a painter. Over ten years, she developed a relationship with Picasso that resulted in two children, but she was also determined to make a name for herself in the art world. This candid and often funny book is an indispensable record of Picasso&apos;s thinking about art and his relationships with others, as well as a portrait of a young woman becoming the remarkable artist she was meant to be.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Organic_Chemistry_by_Janice_Gorzynski_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Organic_Chemistry_by_Janice_Gorzynski_Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Curie-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-2</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Smith&apos;s Organic Chemistry continues to breathe new life into the organic chemistry world. This edition retains its popular delivery of organic chemistry content in a student-friendly format. Janice Smith draws on her extensive teaching background to deliver organic chemistry in a way in which students learn: with limited use of text paragraphs, and through concisely written bulleted lists and highly detailed, well-labeled &quot;teaching&quot; illustrations. The fifth edition features a modernized look with updated chemical structures throughout.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Oxford_Dictionary_of_Chemistry_by_John_Daintith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Oxford_Dictionary_of_Chemistry_by_John_Daintith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Curie-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-2</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Fully revised and updated, the sixth edition of this popular dictionary is the ideal reference resource for students of chemistry, either at school or at university. With over 4,700 entires - over 200 new to this edition - it covers all aspects of chemistry, from physical chemistry tobiochemistry. The sixth edition boasts broader coverage in subject areas such as forensics, metallurgy, materials science, and geology, increasing the dictionary&apos;s appeal to students in these related fields. There are also biographical entries on key figures, highlighted entries on major topics suchas polymers and crystal defects, and a chronology charting the main discoveries in atomic theory, biochemistry, explosives, and plastics.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Sachin-Sharma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Sachin-Sharma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Library"/>
+        <Maintenance-Staff rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Sachin-Sharma"/>
+        <Maintenance-Staff-ID>SS5001</Maintenance-Staff-ID>
+        <rdfs:comment>Sachin-Sharma takes care of the maintenance of the library.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Sapiens_-_A_Brief_History_of_Humankind_by_Yuval_Noah_Harari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Sapiens_-_A_Brief_History_of_Humankind_by_Yuval_Noah_Harari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-1</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Discover the story of human history, from the first humans to walk the earth to today&apos;s modern society. Explore how we came to believe in gods, nations, and human rights, and how our societies were shaped by the Cognitive, Agricultural, and Scientific Revolutions. Sapiens covers it all, using insights from biology, anthropology, paleontology, and economics to challenge our beliefs about what it means to be human. Are we happier now than we were before? Can we change our behavior and influence the future? Dr. Yuval Noah Harari&apos;s provocative and wide-ranging book will challenge the way you think about our species and our place in the world.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/E-Library"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <E-Library-Winger-ID>TK2001</E-Library-Winger-ID>
+        <rdfs:comment>Tarun Kumar is the winger of the E-Library wing. He can help readers with resouces present under the E-Library wing.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/The_Story_of_Art_by_E.H._Gombrich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/The_Story_of_Art_by_E.H._Gombrich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <Regular-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Alan-Klum"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-1</AI-For-Library:E-Library-Wing-ID>
+        <AI-For-Library:Regular-Wing-ID>Reg-Lib-1</AI-For-Library:Regular-Wing-ID>
+        <rdfs:comment>Explore the evolution of art from early cave paintings to modern experimental works with this updated edition. Discover eight new artists, accompanied by fuller captions including mediums and dimensions, and experience six breathtaking fold-outs of iconic masterpieces like Michelangelo&apos;s Sistine Chapel ceiling and Van Eyck&apos;s Ghent Altarpiece.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/The_Agony_and_The_Ecstasy_:_A_biographical_Novel_of_Michelangelo_by_Irving_Stone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/The_Agony_and_The_Ecstasy_:_A_biographical_Novel_of_Michelangelo_by_Irving_Stone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing"/>
+        <E-Library-Wingers rdf:resource="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tarun-Kumar"/>
+        <AI-For-Library:E-Library-Wing-ID>E-Lib-1</AI-For-Library:E-Library-Wing-ID>
+        <rdfs:comment>Explore the tumultuous life and breathtaking art of Michelangelo through this classic biographical novel. From the artist’s fervent romances to his unwavering artistic vision, this book brings both the man and his awe-inspiring works to vivid life. Don’t miss this special edition released in honor of the 500th anniversary of Michelangelo’s David.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment>The root of our ontology</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Curie-Wing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Feynman-Wing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Ramanujan-Wing"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Art-and-History-Wing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/James-Bond-Wing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/R-and-J-Wing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Stan-Lee-Wing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/glnb/ontologies/2023/3/AI-For-Library/Tom-Cruise-Wing"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
