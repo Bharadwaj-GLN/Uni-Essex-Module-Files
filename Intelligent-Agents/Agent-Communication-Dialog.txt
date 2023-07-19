@@ -1,0 +1,35 @@
+Part-1: Alice asking Bob about the stock of 50 inch TVs
+(ask-one
+	:sender		Alice
+	:Content	(stock-50inch-TV ?stock)
+	:Receiver	Bob
+	:Ontology	TV-Warehouse
+	:reply-with	stock-50inch-TV -stock
+	:language	KIF)
+
+(tell
+	:Sender			Bob
+	:Content		(stock-50inch-TV 13)
+	:Receiver		Alice
+	:Ontology		TV-Warehouse
+	:in-reply-to	stock-50inch-TV -stock
+	:language		KIF)
+	
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+Part-2: Alice asking Bob about the stock of HDMI cables
+(ask-one
+	:sender		Alice
+	:Content	(stock-HDMI ?HDMIstock)
+	:Receiver	Bob
+	:Ontology	HDMI-Warehouse
+	:reply-with	stock-HDMI -HDMIstock
+	:language	KIF)
+
+(tell
+	:Sender			Bob
+	:Content		(stock-HDMI 17)
+	:Receiver		Alice
+	:Ontology		HDMI-Warehouse
+	:in-reply-to	stock-HDMI -HDMIstock
+	:language		KIF)
