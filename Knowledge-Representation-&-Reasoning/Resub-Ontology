@@ -1,0 +1,390 @@
+@prefix : <http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/> .
+
+<http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Chemist-for-Medicines
+:Chemist-for-Medicines rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Purchse-Medicines ;
+                       rdfs:range :Offline ,
+                                  :Online .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Offline-Chemist
+:Offline-Chemist rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :Chemist-for-Medicines ;
+                 rdfs:domain :Offline ;
+                 rdfs:range :Over-The-Counter ,
+                            :Over-the-Counter ,
+                            :Prescribed ,
+                            :prescribed .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Offline-Receptionist
+:Offline-Receptionist rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :Receptonist ;
+                      rdfs:domain :Schedule-Appointment ;
+                      rdfs:range :Physical-Appointment .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Online-Chemist
+:Online-Chemist rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :Chemist-for-Medicines ;
+                rdfs:domain :Online ;
+                rdfs:range :Over-The-Counter ,
+                           :Over-the-Counter ,
+                           :Prescribed ,
+                           :prescribed .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Online-Receptionist
+:Online-Receptionist rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :Receptonist ;
+                     rdfs:domain :Schedule-Appointment ;
+                     rdfs:range :Virtual-Appointment .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Receptonist
+:Receptonist rdf:type owl:ObjectProperty ;
+             rdfs:domain :XYZ-Pharma ;
+             rdfs:range :Physical-Appointment ,
+                        :Virtual-Appointment .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Chemist-ID
+:Chemist-ID rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Offline ,
+                        :Online ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Offline-Chemist-ID
+:Offline-Chemist-ID rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Chemist-ID ;
+                    rdfs:domain :Offline ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Offline-Receptionist-ID
+:Offline-Receptionist-ID rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :Receptionist-ID ;
+                         rdfs:domain :Physical-Appointment ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Online-Chemist-ID
+:Online-Chemist-ID rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :Chemist-ID ;
+                   rdfs:domain :Online ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Online-Receptionist-ID
+:Online-Receptionist-ID rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :Receptionist-ID ;
+                        rdfs:domain :Virtual-Appointment ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Receptionist-ID
+:Receptionist-ID rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Physical-Appointment ,
+                             :Virtual-Appointment ;
+                 rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Offline
+:Offline rdf:type owl:Class ;
+         rdfs:subClassOf :Purchse-Medicines ;
+         rdfs:comment "This is the offline section of the pharmacy where the pet owners can physically visit the store and buy the medicines." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Online
+:Online rdf:type owl:Class ;
+        rdfs:subClassOf :Purchse-Medicines ;
+        rdfs:comment "This is the onlne section of the pharmacy where the owners can choose the medicine, which is in requirement and then make the purchase." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Over-The-Counter
+:Over-The-Counter rdf:type owl:Class ;
+                  owl:equivalentClass :Over-the-Counter ;
+                  rdfs:subClassOf :Online ;
+                  rdfs:comment "This is where over the counter medicines, i.e., medicines that don't usually require a doctors advise or prescription are available. This is a part of the offline pharmacy." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Over-the-Counter
+:Over-the-Counter rdf:type owl:Class ;
+                  rdfs:subClassOf :Offline ;
+                  rdfs:comment "This is where over the counter medicines, i.e., medicines that don't usually require a doctors advise or prescription are available. This is a part of the online pharmacy." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Physical-Appointment
+:Physical-Appointment rdf:type owl:Class ;
+                      rdfs:subClassOf :Schedule-Appointment ;
+                      rdfs:comment "This can be opted when the patient (the pet) requires physical examination to be done by available doctors. This is required when the pet is unwell or has an infection and other illnesses of the above sort." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Prescribed
+:Prescribed rdf:type owl:Class ;
+            owl:equivalentClass :prescribed ;
+            rdfs:subClassOf :Online ;
+            rdfs:comment "This offline section of the pharmacy conatins medicines that are prescribed by the doctors after examining the patient (the pet) and that require a prescription in order to make a purchase." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Purchse-Medicines
+:Purchse-Medicines rdf:type owl:Class ;
+                   rdfs:subClassOf :XYZ-Pharma ;
+                   rdfs:comment "The pharma comapny has a pharmacy section from which pet owners, can purchase their medicines, either online or offline. The choice lies with the pet owner." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Schedule-Appointment
+:Schedule-Appointment rdf:type owl:Class ;
+                      rdfs:subClassOf :XYZ-Pharma ;
+                      rdfs:comment "The pharma company is also prototyping the scheduling of doctor appointments for better service to the its patients." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Virtual-Appointment
+:Virtual-Appointment rdf:type owl:Class ;
+                     rdfs:subClassOf :Schedule-Appointment ;
+                     rdfs:comment "This can be opted when the patient (the pet) requires no physical examination to be done by available doctors. It can be chosen for treating outer cuts and wounds and stuuf like that." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/XYZ-Pharma
+:XYZ-Pharma rdf:type owl:Class ;
+            rdfs:comment "XYZ Pharma is a start up that specializes in the manufacture and sales of prescribed and over the counter medicines especially for pets." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/prescribed
+:prescribed rdf:type owl:Class ;
+            rdfs:subClassOf :Offline ;
+            rdfs:comment "This online section of the pharmacy conatins medicines that are prescribed by the doctors after examining the patient (the pet) and that require a prescription in order to make a purchase." .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Bruce-Banner
+:Bruce-Banner rdf:type owl:NamedIndividual ,
+                       :Offline ;
+              :Offline-Chemist :Bruce-Banner ;
+              :Offline-Chemist-ID "Ch02" ;
+              rdfs:comment "Bruce Banner is also a chemist who takes care of the offline section of the pharmacy." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Bucky-Barnes
+:Bucky-Barnes rdf:type owl:NamedIndividual ,
+                       :Schedule-Appointment ;
+              :Receptonist :Bucky-Barnes ;
+              :Receptionist-ID "Re01" ;
+              rdfs:comment "Bucky Barnes is the official receptionist of the pharma company." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Doc1
+:Doc1 rdf:type owl:NamedIndividual ,
+               :Physical-Appointment ;
+      owl:sameAs :Doc5 ;
+      :Offline-Receptionist :Doc1 ;
+      :Offline-Receptionist-ID "Re02" ;
+      rdfs:comment "Doc1 specializes for cats" .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Doc5
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Doc2
+:Doc2 rdf:type owl:NamedIndividual ,
+               :Physical-Appointment ;
+      :Offline-Receptionist :Doc2 ;
+      :Offline-Receptionist-ID "Re02" ;
+      rdfs:comment "Doc2 knows a lote about farm animals like cows, chicken, sheep, etc" .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Doc3
+:Doc3 rdf:type owl:NamedIndividual ,
+               :Physical-Appointment ;
+      owl:sameAs :Doc7 ;
+      :Offline-Receptionist :Doc3 ;
+      :Offline-Receptionist-ID "Re02" ;
+      rdfs:comment "Doc3 is a dog doctor" .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Doc7
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Doc4
+:Doc4 rdf:type owl:NamedIndividual ,
+               :Physical-Appointment ;
+      :Offline-Receptionist :Doc4 ;
+      :Offline-Receptionist-ID "Re02" ;
+      rdfs:comment "Doc4 is a general physician for animals" .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Doc5
+:Doc5 rdf:type owl:NamedIndividual ,
+               :Virtual-Appointment ;
+      :Online-Receptionist :Doc5 ;
+      :Online-Receptionist-ID "Re03" ;
+      rdfs:comment "Doc5 specialises in cats" .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Doc6
+:Doc6 rdf:type owl:NamedIndividual ,
+               :Virtual-Appointment ;
+      :Online-Receptionist :Doc6 ;
+      :Online-Receptionist-ID "Re03" ;
+      rdfs:comment "Doc6 has knowledge about dogs." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Doc7
+:Doc7 rdf:type owl:NamedIndividual ,
+               :Virtual-Appointment ;
+      :Online-Receptionist :Doc7 ;
+      :Online-Receptionist-ID "Re03" ;
+      rdfs:comment "Doc7 has knowledge on farm animals and is also a general physician for animals." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Maria-Hill
+:Maria-Hill rdf:type owl:NamedIndividual ,
+                     :Schedule-Appointment ;
+            :Online-Receptionist :Maria-Hill ;
+            :Online-Receptionist-ID "Re03" ;
+            rdfs:comment "Maria Hill is also a receptionist who takes care of the online appointments of the patients." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Natasha-Romanoff
+:Natasha-Romanoff rdf:type owl:NamedIndividual ,
+                           :Online ;
+                  :Online-Chemist :Natasha-Romanoff ;
+                  :Online-Chemist-ID "Ch03" ;
+                  rdfs:comment "Natasha Romanoff is also a chemist who is responsible for online purchasing of the medicines" .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/OTC1
+:OTC1 rdf:type owl:NamedIndividual ,
+               :Over-The-Counter ;
+      :Offline-Chemist :OTC1 ;
+      :Offline-Chemist-ID "Ch02" ;
+      rdfs:comment "This medicine does not require any doctors prescription for purchase and is readily available at the counter." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/OTC2
+:OTC2 rdf:type owl:NamedIndividual ,
+               :Over-The-Counter ;
+      :Offline-Chemist :OTC2 ;
+      :Offline-Chemist-ID "Ch02" ;
+      rdfs:comment "This medicine does not require any doctors prescription for purchase and is readily available at the counter." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/OTC3
+:OTC3 rdf:type owl:NamedIndividual ,
+               :Over-The-Counter ;
+      :Offline-Chemist :OTC3 ;
+      :Offline-Chemist-ID "Ch02" ;
+      rdfs:comment "This medicine does not require any doctors prescription for purchase and is readily available at the counter." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/OtC1
+:OtC1 rdf:type owl:NamedIndividual ,
+               :Over-the-Counter ;
+      :Online-Chemist :OtC1 ;
+      :Online-Chemist-ID "Ch03" ;
+      rdfs:comment "This medicine does not require any doctors prescription for purchase and is readily available for ordering online." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/OtC2
+:OtC2 rdf:type owl:NamedIndividual ,
+               :Over-the-Counter ;
+      :Online-Chemist :OtC2 ;
+      :Online-Chemist-ID "Ch03" ;
+      rdfs:comment "This medicine does not require any doctors prescription for purchase and is readily available for ordering online." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/OtC3
+:OtC3 rdf:type owl:NamedIndividual ,
+               :Over-the-Counter ;
+      :Online-Chemist :OtC3 ;
+      :Online-Chemist-ID "Ch03" ;
+      rdfs:comment "This medicine does not require any doctors prescription for purchase and is readily available for ordering online." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Peter-Parker
+:Peter-Parker rdf:type owl:NamedIndividual ,
+                       :Purchse-Medicines ;
+              :Chemist-for-Medicines :Peter-Parker ;
+              :Chemist-ID "Ch01" ;
+              rdfs:comment "Peter Parker is the official chemist for the pharma company." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Phil-Coulson
+:Phil-Coulson rdf:type owl:NamedIndividual ,
+                       :Schedule-Appointment ;
+              :Offline-Receptionist :Phil-Coulson ;
+              :Offline-Receptionist-ID "Re02" ;
+              rdfs:comment "Phil Coulson is the receptionist who takes care of offline appointments of the patients with doctors." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Pr1
+:Pr1 rdf:type owl:NamedIndividual ,
+              :Prescribed ;
+     :Offline-Chemist :Pr1 ;
+     :Offline-Chemist-ID "Ch02" ;
+     rdfs:comment "Prescription medicines require a doctor given sheet containing the required medicines in order to purchase." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Pr2
+:Pr2 rdf:type owl:NamedIndividual ,
+              :Prescribed ;
+     :Offline-Chemist :Pr2 ;
+     :Offline-Chemist-ID "Ch02" ;
+     rdfs:comment "Prescription medicines require a doctor given sheet containing the required medicines in order to purchase." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/Pr3
+:Pr3 rdf:type owl:NamedIndividual ,
+              :Prescribed ;
+     :Offline-Chemist :Pr3 ;
+     :Offline-Chemist-ID "Ch02" ;
+     rdfs:comment "Prescription medicines require a doctor given sheet containing the required medicines in order to purchase." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/pr1
+:pr1 rdf:type owl:NamedIndividual ,
+              :prescribed ;
+     :Online-Chemist :pr1 ;
+     :Online-Chemist-ID "Ch03" ;
+     rdfs:comment "Prescription medicines require a doctor given sheet containing the required medicines in order to purchase. Soft copy of the prescription is required for verification of the purchase of the medicine." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/pr2
+:pr2 rdf:type owl:NamedIndividual ,
+              :prescribed ;
+     :Online-Chemist :pr2 ;
+     :Online-Chemist-ID "Ch03" ;
+     rdfs:comment "Prescription medicines require a doctor given sheet containing the required medicines in order to purchase. Soft copy of the prescription is required for verification of the purchase of the medicine." .
+
+
+###  http://www.semanticweb.org/glnb/ontologies/2023/6/untitled-ontology-17/pr3
+:pr3 rdf:type owl:NamedIndividual ,
+              :prescribed ;
+     :Online-Chemist :pr3 ;
+     :Online-Chemist-ID "Ch03" ;
+     rdfs:comment "Prescription medicines require a doctor given sheet containing the required medicines in order to purchase. Soft copy of the prescription is required for verification of the purchase of the medicine." .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
